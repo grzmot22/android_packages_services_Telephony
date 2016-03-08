@@ -258,6 +258,7 @@ public class MobileNetworkSettings extends PreferenceActivity
             // Do not disable the preference screen if the user clicks Data roaming.
             return true;
         } else if (preference == mButtonNationalDataRoam) {
+			 return true;
         } else if (preference == mButtonCOLP) {
             // Do not disable the preference screen if the user clicks COLP
             return true;
@@ -1035,6 +1036,7 @@ public class MobileNetworkSettings extends PreferenceActivity
         } else if (preference == mButtonNationalDataRoam) {
             android.provider.Settings.System.putInt(mPhone.getContext().getContentResolver(),
                     android.provider.Settings.System.MVNO_ROAMING, (Boolean) objValue ? 1 : 0);
+            return true;
         } else if (preference == mButtonCOLP) {
             CMSettings.System.putInt(getContentResolver(),
                     CMSettings.System.CONNECTED_LINE_IDENTIFICATION,
