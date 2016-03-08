@@ -257,12 +257,9 @@ public class MobileNetworkSettings extends PreferenceActivity
         } else if (preference == mButtonDataRoam) {
             // Do not disable the preference screen if the user clicks Data roaming.
             return true;
-<<<<<<< HEAD
         } else if (preference == mButtonNationalDataRoam) {
-=======
         } else if (preference == mButtonCOLP) {
             // Do not disable the preference screen if the user clicks COLP
->>>>>>> 773cab5d42773b46f2bcd258fde9aaa89bba80ef
             return true;
         } else {
             // if the button is anything but the simple toggle preference,
