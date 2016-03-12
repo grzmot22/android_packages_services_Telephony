@@ -256,7 +256,7 @@ public class MobileNetworkSettings extends PreferenceActivity
             // Do not disable the preference screen if the user clicks Data roaming.
             return true;
         } else if (preference == mButtonNationalDataRoam) {
-			 return true;
+            return true;
         } else if (preference == mButtonCOLP) {
             // Do not disable the preference screen if the user clicks COLP
             return true;
@@ -1034,7 +1034,6 @@ public class MobileNetworkSettings extends PreferenceActivity
         } else if (preference == mButtonNationalDataRoam) {
             android.provider.Settings.System.putInt(mPhone.getContext().getContentResolver(),
                     android.provider.Settings.System.MVNO_ROAMING, (Boolean) objValue ? 1 : 0);
-            return true;
         } else if (preference == mButtonCOLP) {
             Settings.Global.putInt(getContentResolver(),
                     Settings.Global.CONNECTED_LINE_IDENTIFICATION,
@@ -1324,7 +1323,7 @@ public class MobileNetworkSettings extends PreferenceActivity
             case Phone.NT_MODE_TDSCDMA_ONLY:
                 mButtonEnabledNetworks.setValue(
                         Integer.toString(Phone.NT_MODE_TDSCDMA_ONLY));
-                mButtonEnabledNetworks.setSummary(R.string.network_tdscdma);
+                mButtonEnabledNetworks.setSummary(R.string.network_3G);
                 break;
             case Phone.NT_MODE_LTE_TDSCDMA_GSM:
             case Phone.NT_MODE_LTE_TDSCDMA_GSM_WCDMA:
