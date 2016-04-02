@@ -253,9 +253,7 @@ public class VoicemailSettingsActivity extends PreferenceActivity
             if (getResources().getBoolean(R.bool.sprint_mwi_quirk)) {
                 mMwiNotification.setOnPreferenceChangeListener(this);
             } else {
-                PreferenceScreen voicemailCategory =
-                        (PreferenceScreen) findPreference(BUTTON_VOICEMAIL_CATEGORY_KEY);
-                voicemailCategory.removePreference(mMwiNotification);
+                prefSet.removePreference(mMwiNotification);
                 mMwiNotification = null;
             }
             int mwiNotification = CMSettings.System.getInt(getContentResolver(),
